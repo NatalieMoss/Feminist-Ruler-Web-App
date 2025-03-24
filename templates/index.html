@@ -28,8 +28,18 @@
             font-size: 20px;
             padding: 10px;
         }
+        .input-container {
+            display: flex;
+            gap: 10px; /* Adjusts spacing between feet and inches */
+            justify-content: center; /* Centers inputs horizontally */
+            align-items: center; /* Aligns inputs vertically */
+        }
+
         .input-field {
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Aligns text & input box */
+
         }
         .result {
             margin-top: 20px;
@@ -45,18 +55,21 @@
     <div class="image-container">
         <img src="{{ url_for('static', filename='Nefertiti.png') }}" alt="Queen Nefertiti holding a ruler">
     </div>
-
+    <h3>Enter a length in imperial (based on King Henry I feet) and convert to nefeet (based on Queen Nefertiti's feet).</h3>
     <form method="POST" action="/convert">
+    <div class="input-container">
         <div class="input-field">
             <label for="feet">Feet:</label>
             <input type="text" name="feet" id="feet" required>
         </div>
         <div class="input-field">
-            <label for="inches">Inches:</label>
+            <label for="inches">Inches (fraction or decimal):</label>
             <input type="text" name="inches" id="inches" required>
         </div>
-        <button type="submit">Convert to Nefeet</button>
-    </form>
+    </div>
+    <button type="submit">Convert to Nefeet</button>
+</form>
+
 
     {% if result %}
         <div class="result">

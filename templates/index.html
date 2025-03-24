@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foot Distance Rematriation Calculator</title>
+    <img src="{{ url_for('static', filename='Nefertiti.png') }}" alt="Queen Nefertiti holding a ruler">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #044944;
+            color: white;
+            padding: 20px;
+        }
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .input-field {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Foot Distance Rematriation Calculator</h1>
+    <form method="POST" action="/convert">
+        <div class="input-field">
+            <label for="feet">Feet:</label>
+            <input type="text" name="feet" id="feet" required>
+        </div>
+        <div class="input-field">
+            <label for="inches">Inches:</label>
+            <input type="text" name="inches" id="inches" required>
+        </div>
+        <button type="submit">Convert to Nefeet</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <p>{{ result }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -2,6 +2,8 @@
 
 This project includes a flask-based app that allows you to convert imperial measurements (feet and inches), which are based on the length of King Henry I's foot length, to a new unit of measure called the nefeet. The nefeet is based on the length of Queen Nefertiti's feet. 
 
+![App Screenshot](static/Feminist_Ruler_Web_App.png)
+
 ## Installation Instructions
 
 ### Prerequisites

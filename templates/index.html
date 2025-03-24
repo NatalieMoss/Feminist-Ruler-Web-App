@@ -10,7 +10,19 @@
             background-color: #044944;
             color: white;
             padding: 20px;
-            text-align: center; /* Center the content */
+            text-align: center; /* Centers inline elements like text */
+        }
+        .image-container {
+            display: flex;
+            justify-content: center; /* Centers image horizontally */
+            align-items: center;
+            margin-bottom: 20px; /* Adds spacing below */
+        }
+        .image-container img {
+            max-width: 30%; /* Adjust the size */
+            height: auto; /* Keeps aspect ratio */
+            display: block;
+            margin: 0 auto;
         }
         input, button {
             font-size: 20px;
@@ -23,25 +35,17 @@
             margin-top: 20px;
             font-size: 24px;
         }
-        .image-container {
-            text-align: center;
-            margin-bottom: 20px; /* Space below the image */
-            max-width: 80%; /* Limit the container width */
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .image-container img {
-            width: 100%;  /* Makes sure the image takes the full width of its container */
-            height: auto; /* Maintains the aspect ratio */
-        }
     </style>
 </head>
 <body>
+    <!-- H1 First -->
+    <h1>Foot Distance Rematriation Calculator</h1>
+
+    <!-- Image Appears After the Title -->
     <div class="image-container">
-        <img src="{{ url_for('static', filename='assets/Nefertiti.png') }}" alt="Queen Nefertiti holding a ruler">
+        <img src="{{ url_for('static', filename='Nefertiti.png') }}" alt="Queen Nefertiti holding a ruler">
     </div>
 
-    <h1>Foot Distance Rematriation Calculator</h1>
     <form method="POST" action="/convert">
         <div class="input-field">
             <label for="feet">Feet:</label>

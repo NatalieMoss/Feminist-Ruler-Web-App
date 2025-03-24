@@ -1,6 +1,6 @@
 # Flask Feminist Ruler Conversion App (for web) 🦶📏♀️
 
-This is a Flask-based web application for converting feet and inches into "nefeet" as part of the Feminist Ruler project.
+This project includes a flask-based app that allows you to convert imperial measurements (feet and inches), which are based on the length of King Henry I's foot length, to a new unit of measure called the nefeet. The nefeet is based on the length of Queen Nefertiti's feet. 
 
 ## Installation Instructions
 
